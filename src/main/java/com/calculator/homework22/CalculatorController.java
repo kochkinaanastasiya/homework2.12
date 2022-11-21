@@ -53,9 +53,8 @@ public class CalculatorController {
     public String divide(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2){
         if(num1 == null || num2 == null) {
             return "Не задан парметр";
-        } else if(num2 == 0){
-            return "Ошибка, на ноль делить нельзя";
         }
+
         String num3 = Integer.toString(num1);
         String num4 = Integer.toString(num2);
         int result = calculatorService.divide(num1, num2);
